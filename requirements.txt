@@ -1,0 +1,13 @@
+plotly.express
+pandas
+IPython.display
+plotly.io
+plotly.graph_objects
+numpy
+locale
+geopandas
+matplotlib.pyplot
+matplotlib.lines
+matplotlib.colors
+json
+itables
