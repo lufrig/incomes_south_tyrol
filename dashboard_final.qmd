@@ -1,0 +1,1096 @@
+---
+title: "I redditi delle famiglie altoatesine attraverso 
+le dichiarazioni IRPEF - 2019-2022"
+author: ""
+format: 
+  dashboard:
+    logo: logo_astat.png
+    theme: simplex.scss
+  html:
+    code-tools: true
+    plotly: true
+execute:
+  freeze: auto 
+  cache: true 
+---
+
+
+<!-- adapted from https://stackoverflow.com/a/62572610/602276 -->
+<script type="text/javascript" charset="utf-8">
+$(document).on('shown.bs.tab', function (event) {
+    console.log("Tab shown");
+    var doc = $(".tab-pane.active .plotly-graph-div");
+    for (var i = 0; i < doc.length; i++) {
+        _Plotly.relayout(doc[i], {autosize: true});
+    }
+});
+</script>
+
+```{python}
+import plotly.express as px
+import pandas as pd
+from IPython.display import display
+import plotly.io as pio
+import plotly.graph_objects as go
+import numpy as np
+import locale
+import geopandas as gpd
+import matplotlib.pyplot as plt
+import matplotlib.lines as mlines
+from matplotlib.colors import ListedColormap
+import json
+from IPython.display import display, HTML
+from itables import show
+from itables import init_notebook_mode
+from itables import options
+
+```
+
+```{python}
+df = pd.read_csv('data_final_2.csv')
+# Creo delle colonne stringa da usare come etichette correttamente formattate nei grafici
+df['reddito_mediano_str'] = df['median_fam_r_disp'].apply(lambda x: f'{x:,.0f}'.replace(',', '.'))
+df['reddito_medio_str'] = df['mean_fam_r_disp'].apply(lambda x: f'{x:,.0f}'.replace(',', '.'))
+
+df_2022=df[df['year'] == 2022]
+df_2021=df[df['year'] == 2021]
+df_2020=df[df['year'] == 2020]
+df_2019=df[df['year'] == 2019]
+
+```
+
+# 2022  
+
+<p>Reddito famigliare netto per Comune - 2022</p>
+
+## Row {.tabset}
+
+### Media
+
+```{python}
+
+# MAPPA 1 
+
+# Leggi lo shapefile
+gdf = gpd.read_file('Municipalities_polygon.shp')
+
+# Trasforma il CRS in EPSG:4326 se necessario
+if gdf.crs != "EPSG:4326":
+    gdf = gdf.to_crs("EPSG:4326")
+
+# Unisci i dati
+mappa = gdf.merge(df_2022, left_on='CODE', right_on='gem')
+
+# Genera il GeoJSON
+geojson = json.loads(mappa.to_json())
+
+# Definisci la palette personalizzata (tonalità di C00000)
+color_scale = [
+    (0, "#FFFFFF"),  # Colore chiaro per il minimo
+    (0.4, "#FF6666"),  # Sfumatura più scura
+    (0.7, "#C00000"),  # Colore originale (rosso scuro)
+    (1, "#660000")     # Colore molto scuro per il massimo
+]
+
+
+# Crea la mappa
+map = px.choropleth(
+    mappa,  # DataFrame unito
+    geojson=geojson,  # GeoJSON delle geometrie
+    locations='gem',  # La colonna nel DataFrame che contiene gli ID
+    color='mean_fam_r_disp',  # La colonna da colorare
+    projection="mercator",  # Proiezione della mappa
+    featureidkey="properties.CODE",  # La proprietà corrispondente nel GeoJSON
+    color_continuous_scale=color_scale  # Applica la palette personalizzata,
+    )
+
+# Personalizza il testo dell'hover
+map = map.update_traces(
+    customdata=mappa[['comune', 'reddito_medio_str']].values,  # Passa i dati personalizzati
+    hovertemplate=(
+        "<b>%{customdata[0]}</b><br>"  # Mostra nome comune
+        "Reddito medio: %{customdata[1]} € <br>"  # Mostra il reddito
+        "<extra></extra>"
+    )
+)
+
+# Adatta la vista ai dati
+map=map.update_geos(fitbounds="locations", visible=False)
+
+
+# Modifica il colore delle linee di confine (tracciati) direttamente
+map = map.update_traces(
+    geojson=geojson,
+    marker=dict(
+        line=dict(
+            color='white',  # Colore bianco per le linee
+            width=0.4  # Larghezza delle linee
+        )
+    )
+)
+
+# Disabilita la colorbar e imposta dimensione
+map = map.update_layout(
+    coloraxis_showscale=False,
+    autosize=True,
+    geo=dict(
+        fitbounds="locations",
+        center=dict(lat=41.8719, lon=12.5674),
+        projection_scale=1.2
+    ),
+    dragmode="zoom"  # Abilita il drag per zoomare
+)
+
+# Mostra la mappa
+map.show()
+
+```
+
+
+```{python}
+
+
+df_2022=df_2022.sort_values(by=['mean_fam_r_disp'], ascending=True)
+
+# Crea il grafico usando px.bar
+fig1 = px.bar(
+    df_2022,
+    x='comune',
+    y='mean_fam_r_disp',
+    labels={'comune': 'Comune', 'mean_fam_r_disp': 'Reddito medio'},
+    color_discrete_sequence=['#C00000']
+)
+
+# Configura il layout
+fig1 = fig1.update_layout(
+    xaxis_title='Comune',
+    yaxis_title='Reddito (€)',
+    xaxis=dict(showticklabels=False),
+    yaxis=dict(
+        title="Reddito (€)",
+        range=[0, 65000],  # Imposta l'intervallo da 0 a 65.000
+        ticktext=[f'{i:,.0f}'.replace(',', '.') for i in range(0, 65001, 5000)],
+        tickvals=[i for i in range(0, 65001, 5000)]  # Corrisponde ai valori reali da mostrare  
+    ),
+    template='simple_white',
+)
+
+fig1 = fig1.update_traces(
+    hovertemplate='<b>%{x}</b><br>Reddito medio: %{customdata} €'
+
+)
+
+# Aggiungi la colonna formattata come custom data per il tooltip
+fig1.data[0].customdata = df_2022[['reddito_medio_str']].values
+
+fig1.show()
+
+```
+
+### Mediana
+
+```{python}
+
+# MAPPA 1 
+
+# Leggi lo shapefile
+gdf = gpd.read_file('Municipalities_polygon.shp')
+
+# Trasforma il CRS in EPSG:4326 se necessario
+if gdf.crs != "EPSG:4326":
+    gdf = gdf.to_crs("EPSG:4326")
+
+# Unisci i dati
+mappa = gdf.merge(df_2022, left_on='CODE', right_on='gem')
+
+# Genera il GeoJSON
+geojson = json.loads(mappa.to_json())
+
+# Definisci la palette personalizzata (tonalità di C00000)
+color_scale = [
+    (0, "#FFFFFF"),  # Colore chiaro per il minimo
+    (0.4, "#FF6666"),  # Sfumatura più scura
+    (0.7, "#C00000"),  # Colore originale (rosso scuro)
+    (1, "#660000")     # Colore molto scuro per il massimo
+]
+
+
+# Crea la mappa
+map = px.choropleth(
+    mappa,  # DataFrame unito
+    geojson=geojson,  # GeoJSON delle geometrie
+    locations='gem',  # La colonna nel DataFrame che contiene gli ID
+    color='median_fam_r_disp',  # La colonna da colorare
+    projection="mercator",  # Proiezione della mappa
+    featureidkey="properties.CODE",  # La proprietà corrispondente nel GeoJSON
+    color_continuous_scale=color_scale  # Applica la palette personalizzata,
+    )
+
+# Personalizza il testo dell'hover
+map = map.update_traces(
+    customdata=mappa[['comune', 'reddito_mediano_str']].values,  # Passa i dati personalizzati
+    hovertemplate=(
+        "<b>%{customdata[0]}</b><br>"  # Mostra nome comune
+        "Reddito mediano: %{customdata[1]} € <br>"  # Mostra il reddito
+        "<extra></extra>"
+    )
+)
+
+# Adatta la vista ai dati
+map=map.update_geos(fitbounds="locations", visible=False)
+
+
+# Modifica il colore delle linee di confine (tracciati) direttamente
+map = map.update_traces(
+    geojson=geojson,
+    marker=dict(
+        line=dict(
+            color='white',  # Colore bianco per le linee
+            width=0.4  # Larghezza delle linee
+        )
+    )
+)
+
+# Disabilita la colorbar e imposta dimensione
+map = map.update_layout(
+    coloraxis_showscale=False,
+    autosize=True,
+    geo=dict(
+        fitbounds="locations",
+        center=dict(lat=41.8719, lon=12.5674),
+        projection_scale=1.2
+    ),
+    dragmode="zoom"  # Abilita il drag per zoomare
+)
+
+# Mostra la mappa
+map.show()
+
+```
+
+
+```{python}
+
+
+df_2022=df_2022.sort_values(by=['median_fam_r_disp'], ascending=True)
+
+# Crea il grafico usando px.bar
+fig1 = px.bar(
+    df_2022,
+    x='comune',
+    y='median_fam_r_disp',
+    labels={'comune': 'Comune', 'median_fam_r_disp': 'Reddito mediano'},
+    color_discrete_sequence=['#C00000']
+)
+
+# Configura il layout
+fig1 = fig1.update_layout(
+    xaxis_title='Comune',
+    yaxis_title='Reddito (€)',
+    xaxis=dict(showticklabels=False),
+    yaxis=dict(
+        title="Reddito (€)",
+        range=[0, 45000],  # Imposta l'intervallo da 0 a 70.000
+        ticktext=[f'{i:,.0f}'.replace(',', '.') for i in range(0, 45001, 5000)],
+        tickvals=[i for i in range(0, 45001, 5000)]  # Corrisponde ai valori reali da mostrare  
+    ),
+    template='simple_white',
+)
+
+fig1 = fig1.update_traces(
+    hovertemplate='<b>%{x}</b><br>Reddito mediano: %{customdata} €'
+
+)
+
+# Aggiungi la colonna formattata come custom data per il tooltip
+fig1.data[0].customdata = df_2022[['reddito_mediano_str']].values
+
+fig1.show()
+
+```
+
+
+# 2021 
+
+<p>Reddito famigliare netto per Comune - 2021</p>
+
+## Row {.tabset}
+
+### Media
+
+```{python}
+
+# MAPPA 1 
+
+# Leggi lo shapefile
+gdf = gpd.read_file('Municipalities_polygon.shp')
+
+# Trasforma il CRS in EPSG:4326 se necessario
+if gdf.crs != "EPSG:4326":
+    gdf = gdf.to_crs("EPSG:4326")
+
+# Unisci i dati
+mappa = gdf.merge(df_2021, left_on='CODE', right_on='gem')
+
+# Genera il GeoJSON
+geojson = json.loads(mappa.to_json())
+
+# Definisci la palette personalizzata (tonalità di C00000)
+color_scale = [
+    (0, "#FFFFFF"),  # Colore chiaro per il minimo
+    (0.4, "#FF6666"),  # Sfumatura più scura
+    (0.7, "#C00000"),  # Colore originale (rosso scuro)
+    (1, "#660000")     # Colore molto scuro per il massimo
+]
+
+
+# Crea la mappa
+map = px.choropleth(
+    mappa,  # DataFrame unito
+    geojson=geojson,  # GeoJSON delle geometrie
+    locations='gem',  # La colonna nel DataFrame che contiene gli ID
+    color='mean_fam_r_disp',  # La colonna da colorare
+    projection="mercator",  # Proiezione della mappa
+    featureidkey="properties.CODE",  # La proprietà corrispondente nel GeoJSON
+    color_continuous_scale=color_scale  # Applica la palette personalizzata,
+    )
+
+# Personalizza il testo dell'hover
+map = map.update_traces(
+    customdata=mappa[['comune', 'reddito_medio_str']].values,  # Passa i dati personalizzati
+    hovertemplate=(
+        "<b>%{customdata[0]}</b><br>"  # Mostra nome comune
+        "Reddito medio: %{customdata[1]} € <br>"  # Mostra il reddito
+        "<extra></extra>"
+    )
+)
+
+# Adatta la vista ai dati
+map=map.update_geos(fitbounds="locations", visible=False)
+
+
+# Modifica il colore delle linee di confine (tracciati) direttamente
+map = map.update_traces(
+    geojson=geojson,
+    marker=dict(
+        line=dict(
+            color='white',  # Colore bianco per le linee
+            width=0.4  # Larghezza delle linee
+        )
+    )
+)
+
+# Disabilita la colorbar e imposta dimensione
+map = map.update_layout(
+    coloraxis_showscale=False,
+    autosize=True,
+    geo=dict(
+        fitbounds="locations",
+        center=dict(lat=41.8719, lon=12.5674),
+        projection_scale=1.2
+    ),
+    dragmode="zoom"  # Abilita il drag per zoomare
+)
+
+# Mostra la mappa
+map.show()
+
+```
+
+
+```{python}
+
+df_2021=df_2021.sort_values(by=['mean_fam_r_disp'], ascending=True)
+
+# Crea il grafico usando px.bar
+fig1 = px.bar(
+    df_2021,
+    x='comune',
+    y='mean_fam_r_disp',
+    labels={'comune': 'Comune', 'mean_fam_r_disp': 'Reddito medio'},
+    color_discrete_sequence=['#C00000']
+)
+
+# Configura il layout
+fig1 = fig1.update_layout(
+    xaxis_title='Comune',
+    yaxis_title='Reddito (€)',
+    xaxis=dict(showticklabels=False),
+    yaxis=dict(
+        title="Reddito (€)",
+        range=[0, 55000],  # Imposta l'intervallo da 0 a 65.000
+        ticktext=[f'{i:,.0f}'.replace(',', '.') for i in range(0, 55001, 5000)],
+        tickvals=[i for i in range(0, 55001, 5000)]  # Corrisponde ai valori reali da mostrare  
+    ),
+    template='simple_white',
+)
+
+fig1 = fig1.update_traces(
+    hovertemplate='<b>%{x}</b><br>Reddito medio: %{customdata} €'
+
+)
+
+# Aggiungi la colonna formattata come custom data per il tooltip
+fig1.data[0].customdata = df_2021[['reddito_medio_str']].values
+
+fig1.show()
+
+```
+
+### Mediana
+
+```{python}
+
+# MAPPA 1 
+
+# Leggi lo shapefile
+gdf = gpd.read_file('Municipalities_polygon.shp')
+
+# Trasforma il CRS in EPSG:4326 se necessario
+if gdf.crs != "EPSG:4326":
+    gdf = gdf.to_crs("EPSG:4326")
+
+# Unisci i dati
+mappa = gdf.merge(df_2021, left_on='CODE', right_on='gem')
+
+# Genera il GeoJSON
+geojson = json.loads(mappa.to_json())
+
+# Definisci la palette personalizzata (tonalità di C00000)
+color_scale = [
+    (0, "#FFFFFF"),  # Colore chiaro per il minimo
+    (0.4, "#FF6666"),  # Sfumatura più scura
+    (0.7, "#C00000"),  # Colore originale (rosso scuro)
+    (1, "#660000")     # Colore molto scuro per il massimo
+]
+
+
+# Crea la mappa
+map = px.choropleth(
+    mappa,  # DataFrame unito
+    geojson=geojson,  # GeoJSON delle geometrie
+    locations='gem',  # La colonna nel DataFrame che contiene gli ID
+    color='median_fam_r_disp',  # La colonna da colorare
+    projection="mercator",  # Proiezione della mappa
+    featureidkey="properties.CODE",  # La proprietà corrispondente nel GeoJSON
+    color_continuous_scale=color_scale  # Applica la palette personalizzata,
+    )
+
+# Personalizza il testo dell'hover
+map = map.update_traces(
+    customdata=mappa[['comune', 'reddito_mediano_str']].values,  # Passa i dati personalizzati
+    hovertemplate=(
+        "<b>%{customdata[0]}</b><br>"  # Mostra nome comune
+        "Reddito mediano: %{customdata[1]} € <br>"  # Mostra il reddito
+        "<extra></extra>"
+    )
+)
+
+# Adatta la vista ai dati
+map=map.update_geos(fitbounds="locations", visible=False)
+
+
+# Modifica il colore delle linee di confine (tracciati) direttamente
+map = map.update_traces(
+    geojson=geojson,
+    marker=dict(
+        line=dict(
+            color='white',  # Colore bianco per le linee
+            width=0.4  # Larghezza delle linee
+        )
+    )
+)
+
+# Disabilita la colorbar e imposta dimensione
+map = map.update_layout(
+    coloraxis_showscale=False,
+    autosize=True,
+    geo=dict(
+        fitbounds="locations",
+        center=dict(lat=41.8719, lon=12.5674),
+        projection_scale=1.2
+    ),
+    dragmode="zoom"  # Abilita il drag per zoomare
+)
+
+# Mostra la mappa
+map.show()
+
+```
+
+
+```{python}
+
+
+df_2021=df_2021.sort_values(by=['median_fam_r_disp'], ascending=True)
+
+# Crea il grafico usando px.bar
+fig1 = px.bar(
+    df_2021,
+    x='comune',
+    y='median_fam_r_disp',
+    labels={'comune': 'Comune', 'median_fam_r_disp': 'Reddito mediano'},
+    color_discrete_sequence=['#C00000']
+)
+
+# Configura il layout
+fig1 = fig1.update_layout(
+    xaxis_title='Comune',
+    yaxis_title='Reddito (€)',
+    xaxis=dict(showticklabels=False),
+    yaxis=dict(
+        title="Reddito (€)",
+        range=[0, 45000],  # Imposta l'intervallo da 0 a 70.000
+        ticktext=[f'{i:,.0f}'.replace(',', '.') for i in range(0, 45001, 5000)],
+        tickvals=[i for i in range(0, 45001, 5000)]  # Corrisponde ai valori reali da mostrare  
+    ),
+    template='simple_white',
+)
+
+fig1 = fig1.update_traces(
+    hovertemplate='<b>%{x}</b><br>Reddito mediano: %{customdata} €'
+
+)
+
+# Aggiungi la colonna formattata come custom data per il tooltip
+fig1.data[0].customdata = df_2021[['reddito_mediano_str']].values
+
+fig1.show()
+
+```
+
+
+# 2020 
+
+<p>Reddito famigliare netto per Comune - 2020</p>
+
+## Row {.tabset}
+
+### Media
+
+```{python}
+
+# MAPPA 1 
+
+# Leggi lo shapefile
+gdf = gpd.read_file('Municipalities_polygon.shp')
+
+# Trasforma il CRS in EPSG:4326 se necessario
+if gdf.crs != "EPSG:4326":
+    gdf = gdf.to_crs("EPSG:4326")
+
+# Unisci i dati
+mappa = gdf.merge(df_2020, left_on='CODE', right_on='gem')
+
+# Genera il GeoJSON
+geojson = json.loads(mappa.to_json())
+
+# Definisci la palette personalizzata (tonalità di C00000)
+color_scale = [
+    (0, "#FFFFFF"),  # Colore chiaro per il minimo
+    (0.4, "#FF6666"),  # Sfumatura più scura
+    (0.7, "#C00000"),  # Colore originale (rosso scuro)
+    (1, "#660000")     # Colore molto scuro per il massimo
+]
+
+
+# Crea la mappa
+map = px.choropleth(
+    mappa,  # DataFrame unito
+    geojson=geojson,  # GeoJSON delle geometrie
+    locations='gem',  # La colonna nel DataFrame che contiene gli ID
+    color='mean_fam_r_disp',  # La colonna da colorare
+    projection="mercator",  # Proiezione della mappa
+    featureidkey="properties.CODE",  # La proprietà corrispondente nel GeoJSON
+    color_continuous_scale=color_scale  # Applica la palette personalizzata,
+    )
+
+# Personalizza il testo dell'hover
+map = map.update_traces(
+    customdata=mappa[['comune', 'reddito_medio_str']].values,  # Passa i dati personalizzati
+    hovertemplate=(
+        "<b>%{customdata[0]}</b><br>"  # Mostra nome comune
+        "Reddito medio: %{customdata[1]} € <br>"  # Mostra il reddito
+        "<extra></extra>"
+    )
+)
+
+# Adatta la vista ai dati
+map=map.update_geos(fitbounds="locations", visible=False)
+
+
+# Modifica il colore delle linee di confine (tracciati) direttamente
+map = map.update_traces(
+    geojson=geojson,
+    marker=dict(
+        line=dict(
+            color='white',  # Colore bianco per le linee
+            width=0.4  # Larghezza delle linee
+        )
+    )
+)
+
+# Disabilita la colorbar e imposta dimensione
+map = map.update_layout(
+    coloraxis_showscale=False,
+    autosize=True,
+    geo=dict(
+        fitbounds="locations",
+        center=dict(lat=41.8719, lon=12.5674),
+        projection_scale=1.2
+    ),
+    dragmode="zoom"  # Abilita il drag per zoomare
+)
+
+# Mostra la mappa
+map.show()
+
+```
+
+
+```{python}
+
+df_2020=df_2020.sort_values(by=['mean_fam_r_disp'], ascending=True)
+
+# Crea il grafico usando px.bar
+fig1 = px.bar(
+    df_2020,
+    x='comune',
+    y='mean_fam_r_disp',
+    labels={'comune': 'Comune', 'mean_fam_r_disp': 'Reddito medio'},
+    color_discrete_sequence=['#C00000']
+)
+
+# Configura il layout
+fig1 = fig1.update_layout(
+    xaxis_title='Comune',
+    yaxis_title='Reddito (€)',
+    xaxis=dict(showticklabels=False),
+    yaxis=dict(
+        title="Reddito (€)",
+        range=[0, 55000],  # Imposta l'intervallo da 0 a 65.000
+        ticktext=[f'{i:,.0f}'.replace(',', '.') for i in range(0, 55001, 5000)],
+        tickvals=[i for i in range(0, 55001, 5000)]  # Corrisponde ai valori reali da mostrare  
+    ),
+    template='simple_white',
+)
+
+fig1 = fig1.update_traces(
+    hovertemplate='<b>%{x}</b><br>Reddito medio: %{customdata} €'
+
+)
+
+# Aggiungi la colonna formattata come custom data per il tooltip
+fig1.data[0].customdata = df_2020[['reddito_medio_str']].values
+
+fig1.show()
+
+```
+
+### Mediana
+
+```{python}
+
+# MAPPA 1 
+
+# Leggi lo shapefile
+gdf = gpd.read_file('Municipalities_polygon.shp')
+
+# Trasforma il CRS in EPSG:4326 se necessario
+if gdf.crs != "EPSG:4326":
+    gdf = gdf.to_crs("EPSG:4326")
+
+# Unisci i dati
+mappa = gdf.merge(df_2020, left_on='CODE', right_on='gem')
+
+# Genera il GeoJSON
+geojson = json.loads(mappa.to_json())
+
+# Definisci la palette personalizzata (tonalità di C00000)
+color_scale = [
+    (0, "#FFFFFF"),  # Colore chiaro per il minimo
+    (0.4, "#FF6666"),  # Sfumatura più scura
+    (0.7, "#C00000"),  # Colore originale (rosso scuro)
+    (1, "#660000")     # Colore molto scuro per il massimo
+]
+
+
+# Crea la mappa
+map = px.choropleth(
+    mappa,  # DataFrame unito
+    geojson=geojson,  # GeoJSON delle geometrie
+    locations='gem',  # La colonna nel DataFrame che contiene gli ID
+    color='median_fam_r_disp',  # La colonna da colorare
+    projection="mercator",  # Proiezione della mappa
+    featureidkey="properties.CODE",  # La proprietà corrispondente nel GeoJSON
+    color_continuous_scale=color_scale  # Applica la palette personalizzata,
+    )
+
+# Personalizza il testo dell'hover
+map = map.update_traces(
+    customdata=mappa[['comune', 'reddito_mediano_str']].values,  # Passa i dati personalizzati
+    hovertemplate=(
+        "<b>%{customdata[0]}</b><br>"  # Mostra nome comune
+        "Reddito mediano: %{customdata[1]} € <br>"  # Mostra il reddito
+        "<extra></extra>"
+    )
+)
+
+# Adatta la vista ai dati
+map=map.update_geos(fitbounds="locations", visible=False)
+
+
+# Modifica il colore delle linee di confine (tracciati) direttamente
+map = map.update_traces(
+    geojson=geojson,
+    marker=dict(
+        line=dict(
+            color='white',  # Colore bianco per le linee
+            width=0.4  # Larghezza delle linee
+        )
+    )
+)
+
+# Disabilita la colorbar e imposta dimensione
+map = map.update_layout(
+    coloraxis_showscale=False,
+    autosize=True,
+    geo=dict(
+        fitbounds="locations",
+        center=dict(lat=41.8719, lon=12.5674),
+        projection_scale=1.2
+    ),
+    dragmode="zoom"  # Abilita il drag per zoomare
+)
+
+# Mostra la mappa
+map.show()
+
+```
+
+
+```{python}
+
+
+df_2020=df_2020.sort_values(by=['median_fam_r_disp'], ascending=True)
+
+# Crea il grafico usando px.bar
+fig1 = px.bar(
+    df_2020,
+    x='comune',
+    y='median_fam_r_disp',
+    labels={'comune': 'Comune', 'median_fam_r_disp': 'Reddito mediano'},
+    color_discrete_sequence=['#C00000']
+)
+
+# Configura il layout
+fig1 = fig1.update_layout(
+    xaxis_title='Comune',
+    yaxis_title='Reddito (€)',
+    xaxis=dict(showticklabels=False),
+    yaxis=dict(
+        title="Reddito (€)",
+        range=[0, 40000],  # Imposta l'intervallo
+        ticktext=[f'{i:,.0f}'.replace(',', '.') for i in range(0, 40001, 5000)],
+        tickvals=[i for i in range(0, 40001, 5000)]  # Corrisponde ai valori reali da mostrare  
+    ),
+    template='simple_white',
+)
+
+fig1 = fig1.update_traces(
+    hovertemplate='<b>%{x}</b><br>Reddito mediano: %{customdata} €'
+
+)
+
+# Aggiungi la colonna formattata come custom data per il tooltip
+fig1.data[0].customdata = df_2020[['reddito_mediano_str']].values
+
+fig1.show()
+
+```
+
+
+# 2019 
+
+<p>Reddito famigliare netto per Comune - 2019</p>
+
+## Row {.tabset}
+
+### Media
+
+```{python}
+
+# MAPPA 1 
+
+# Leggi lo shapefile
+gdf = gpd.read_file('Municipalities_polygon.shp')
+
+# Trasforma il CRS in EPSG:4326 se necessario
+if gdf.crs != "EPSG:4326":
+    gdf = gdf.to_crs("EPSG:4326")
+
+# Unisci i dati
+mappa = gdf.merge(df_2019, left_on='CODE', right_on='gem')
+
+# Genera il GeoJSON
+geojson = json.loads(mappa.to_json())
+
+# Definisci la palette personalizzata (tonalità di C00000)
+color_scale = [
+    (0, "#FFFFFF"),  # Colore chiaro per il minimo
+    (0.4, "#FF6666"),  # Sfumatura più scura
+    (0.7, "#C00000"),  # Colore originale (rosso scuro)
+    (1, "#660000")     # Colore molto scuro per il massimo
+]
+
+
+# Crea la mappa
+map = px.choropleth(
+    mappa,  # DataFrame unito
+    geojson=geojson,  # GeoJSON delle geometrie
+    locations='gem',  # La colonna nel DataFrame che contiene gli ID
+    color='mean_fam_r_disp',  # La colonna da colorare
+    projection="mercator",  # Proiezione della mappa
+    featureidkey="properties.CODE",  # La proprietà corrispondente nel GeoJSON
+    color_continuous_scale=color_scale  # Applica la palette personalizzata,
+    )
+
+# Personalizza il testo dell'hover
+map = map.update_traces(
+    customdata=mappa[['comune', 'reddito_medio_str']].values,  # Passa i dati personalizzati
+    hovertemplate=(
+        "<b>%{customdata[0]}</b><br>"  # Mostra nome comune
+        "Reddito medio: %{customdata[1]} € <br>"  # Mostra il reddito
+        "<extra></extra>"
+    )
+)
+
+# Adatta la vista ai dati
+map=map.update_geos(fitbounds="locations", visible=False)
+
+
+# Modifica il colore delle linee di confine (tracciati) direttamente
+map = map.update_traces(
+    geojson=geojson,
+    marker=dict(
+        line=dict(
+            color='white',  # Colore bianco per le linee
+            width=0.4  # Larghezza delle linee
+        )
+    )
+)
+
+# Disabilita la colorbar e imposta dimensione
+map = map.update_layout(
+    coloraxis_showscale=False,
+    autosize=True,
+    geo=dict(
+        fitbounds="locations",
+        center=dict(lat=41.8719, lon=12.5674),
+        projection_scale=1.2
+    ),
+    dragmode="zoom"  # Abilita il drag per zoomare
+)
+
+# Mostra la mappa
+map.show()
+
+```
+
+
+```{python}
+
+df_2019=df_2019.sort_values(by=['mean_fam_r_disp'], ascending=True)
+
+# Crea il grafico usando px.bar
+fig1 = px.bar(
+    df_2019,
+    x='comune',
+    y='mean_fam_r_disp',
+    labels={'comune': 'Comune', 'mean_fam_r_disp': 'Reddito medio'},
+    color_discrete_sequence=['#C00000']
+)
+
+# Configura il layout
+fig1 = fig1.update_layout(
+    xaxis_title='Comune',
+    yaxis_title='Reddito (€)',
+    xaxis=dict(showticklabels=False),
+    yaxis=dict(
+        title="Reddito (€)",
+        range=[0, 65000],  # Imposta l'intervallo da 0 a 65.000
+        ticktext=[f'{i:,.0f}'.replace(',', '.') for i in range(0, 65001, 5000)],
+        tickvals=[i for i in range(0, 65001, 5000)]  # Corrisponde ai valori reali da mostrare  
+    ),
+    template='simple_white',
+)
+
+fig1 = fig1.update_traces(
+    hovertemplate='<b>%{x}</b><br>Reddito medio: %{customdata} €'
+
+)
+
+# Aggiungi la colonna formattata come custom data per il tooltip
+fig1.data[0].customdata = df_2019[['reddito_medio_str']].values
+
+fig1.show()
+
+```
+
+### Mediana
+
+```{python}
+
+# MAPPA 1 
+
+# Leggi lo shapefile
+gdf = gpd.read_file('Municipalities_polygon.shp')
+
+# Trasforma il CRS in EPSG:4326 se necessario
+if gdf.crs != "EPSG:4326":
+    gdf = gdf.to_crs("EPSG:4326")
+
+# Unisci i dati
+mappa = gdf.merge(df_2019, left_on='CODE', right_on='gem')
+
+# Genera il GeoJSON
+geojson = json.loads(mappa.to_json())
+
+# Definisci la palette personalizzata (tonalità di C00000)
+color_scale = [
+    (0, "#FFFFFF"),  # Colore chiaro per il minimo
+    (0.4, "#FF6666"),  # Sfumatura più scura
+    (0.7, "#C00000"),  # Colore originale (rosso scuro)
+    (1, "#660000")     # Colore molto scuro per il massimo
+]
+
+
+# Crea la mappa
+map = px.choropleth(
+    mappa,  # DataFrame unito
+    geojson=geojson,  # GeoJSON delle geometrie
+    locations='gem',  # La colonna nel DataFrame che contiene gli ID
+    color='median_fam_r_disp',  # La colonna da colorare
+    projection="mercator",  # Proiezione della mappa
+    featureidkey="properties.CODE",  # La proprietà corrispondente nel GeoJSON
+    color_continuous_scale=color_scale  # Applica la palette personalizzata,
+    )
+
+# Personalizza il testo dell'hover
+map = map.update_traces(
+    customdata=mappa[['comune', 'reddito_mediano_str']].values,  # Passa i dati personalizzati
+    hovertemplate=(
+        "<b>%{customdata[0]}</b><br>"  # Mostra nome comune
+        "Reddito mediano: %{customdata[1]} € <br>"  # Mostra il reddito
+        "<extra></extra>"
+    )
+)
+
+# Adatta la vista ai dati
+map=map.update_geos(fitbounds="locations", visible=False)
+
+
+# Modifica il colore delle linee di confine (tracciati) direttamente
+map = map.update_traces(
+    geojson=geojson,
+    marker=dict(
+        line=dict(
+            color='white',  # Colore bianco per le linee
+            width=0.4  # Larghezza delle linee
+        )
+    )
+)
+
+# Disabilita la colorbar e imposta dimensione
+map = map.update_layout(
+    coloraxis_showscale=False,
+    autosize=True,
+    geo=dict(
+        fitbounds="locations",
+        center=dict(lat=41.8719, lon=12.5674),
+        projection_scale=1.2
+    ),
+    dragmode="zoom"  # Abilita il drag per zoomare
+)
+
+# Mostra la mappa
+map.show()
+
+```
+
+
+```{python}
+
+
+df_2019=df_2019.sort_values(by=['median_fam_r_disp'], ascending=True)
+
+# Crea il grafico usando px.bar
+fig1 = px.bar(
+    df_2019,
+    x='comune',
+    y='median_fam_r_disp',
+    labels={'comune': 'Comune', 'median_fam_r_disp': 'Reddito mediano'},
+    color_discrete_sequence=['#C00000']
+)
+
+# Configura il layout
+fig1 = fig1.update_layout(
+    xaxis_title='Comune',
+    yaxis_title='Reddito (€)',
+    xaxis=dict(showticklabels=False),
+    yaxis=dict(
+        title="Reddito (€)",
+        range=[0, 45000],  # Imposta l'intervallo da 0 a 70.000
+        ticktext=[f'{i:,.0f}'.replace(',', '.') for i in range(0, 45001, 5000)],
+        tickvals=[i for i in range(0, 45001, 5000)]  # Corrisponde ai valori reali da mostrare  
+    ),
+    template='simple_white',
+)
+
+fig1 = fig1.update_traces(
+    hovertemplate='<b>%{x}</b><br>Reddito mediano: %{customdata} €'
+
+)
+
+# Aggiungi la colonna formattata come custom data per il tooltip
+fig1.data[0].customdata = df_2019[['reddito_mediano_str']].values
+
+fig1.show()
+
+```
+
+
+
+# Dati comunali
+
+<p>Reddito famigliare netto per Comune - 2019-2022</p>
+
+
+```{python}
+
+df_new = df[['year','comune', 'reddito_medio_str','reddito_mediano_str']]
+
+# Nuovi nomi delle colonne
+nomi_col = ['Anno', 'Comune','Reddito medio', 'Reddito mediano']
+
+df_new.columns = nomi_col
+
+init_notebook_mode(all_interactive=True)
+
+# Mostra la tabella interattiva
+show(df_new,
+    buttons=["csvHtml5", "excelHtml5"], 
+             style="table-layout:auto;",
+             classes="display nowrap compact",
+             autoWidth=True,
+             dom="Bfrtip") 
+
+```
+
+# Metodologia
+
+La fonte dei dati è l’Anagrafe Tributaria dell’Agenzia delle Entrate.
+
+Partendo dal reddito lordo pari alla somma di tutti i redditi dichiarati dai contribuenti, si calcola il reddito netto di ciascun contribuente, ovvero il reddito al netto delle imposte che rimane a disposizione dei membri familiari. Da qui si calcola poi il reddito netto familiare.
+
+Maggiori informazioni nell'astat-info xx/2024 (mettere qui link poi)
