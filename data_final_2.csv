@@ -1,0 +1,465 @@
+,gem,comune,degurba,GEMI,GEMD,mean_fam_r_disp,median_fam_r_disp,count_fam_r_disp,year
+0,001,Aldino/Aldein,3,Aldino,Aldein,40766.25706260032,33060.87,623,2019
+1,002,Andriano/Andrian,3,Andriano,Andrian,42048.58402439024,32245.5,410,2019
+2,003,Anterivo/Altrei,3,Anterivo,Altrei,32582.243314285715,27708.0,175,2019
+3,004,Appiano sulla strada del vino/Eppan an der Weinstraße,2,Appiano sulla strada del vino,Eppan an der Weinstraße,46824.98616246953,33104.45,6155,2019
+4,005,Avelengo/Hafling,3,Avelengo,Hafling,48737.41701342282,36534.0,298,2019
+5,006,Badia/Abtei,3,Badia,Abtei,56967.4637077769,40373.0,1273,2019
+6,007,Barbiano/Barbian,3,Barbiano,Barbian,40049.57887905605,30770.5,678,2019
+7,008,Bolzano/Bozen,1,Bolzano,Bozen,39931.34764694591,28792.5,46888,2019
+8,009,Braies/Prags,3,Braies,Prags,52274.98088983051,39879.5,236,2019
+9,010,Brennero/Brenner,3,Brennero,Brenner,36835.285669546436,29125.21,926,2019
+10,011,Bressanone/Brixen,2,Bressanone,Brixen,45757.05026430756,32645.5,9156,2019
+11,012,Bronzolo/Branzoll,2,Bronzolo,Branzoll,38327.6986760812,31816.0,1133,2019
+12,013,Brunico/Bruneck,2,Brunico,Bruneck,46110.4319640853,32138.66,7128,2019
+13,014,Caines/Kuens,2,Caines,Kuens,38780.477,29580.5,150,2019
+14,015,Caldaro sulla strada del vino/Kaltern an der Weinstraße,2,Caldaro sulla strada del vino,Kaltern an der Weinstraße,42926.26219425526,31219.0,3377,2019
+15,016,Campo di Trens/Freienfeld,3,Campo di Trens,Freienfeld,38922.72763981042,32938.24,1055,2019
+16,017,Campo Tures/Sand in Taufers,3,Campo Tures,Sand in Taufers,41967.8262959681,31936.0,2257,2019
+17,018,Castelbello-Ciardes/Kastelbell-Tschars,3,Castelbello-Ciardes,Kastelbell-Tschars,36755.91019501625,27071.04,923,2019
+18,019,Castelrotto/Kastelruth,3,Castelrotto,Kastelruth,45397.439773950486,31744.6,2787,2019
+19,020,Cermes/Tscherms,2,Cermes,Tscherms,41161.83539325843,32926.95,623,2019
+20,021,Chienes/Kiens,3,Chienes,Kiens,47987.99329661017,35798.2,1180,2019
+21,022,Chiusa/Klausen,3,Chiusa,Klausen,42558.935369193154,32969.0,2045,2019
+22,023,Cornedo all'Isarco/Karneid,3,Cornedo all'Isarco,Karneid,41101.68374620061,32621.995000000003,1316,2019
+23,024,Cortaccia sulla strada del vino/Kurtatsch an der Weinstraße,3,Cortaccia sulla strada del vino,Kurtatsch an der Weinstraße,38134.66804661487,28205.34,901,2019
+24,025,Cortina sulla strada del vino/Kurtinig an der Weinstraße,3,Cortina sulla strada del vino,Kurtinig an der Weinstraße,36969.27482517483,26899.795,286,2019
+25,026,Corvara in Badia/Corvara,3,Corvara in Badia,Corvara,64117.91227272727,42187.0,550,2019
+26,027,Curon Venosta/Graun im Vinschgau,3,Curon Venosta,Graun im Vinschgau,36529.14253986332,27261.27,878,2019
+27,028,Dobbiaco/Toblach,3,Dobbiaco,Toblach,43853.21758832565,32858.479999999996,1302,2019
+28,029,Egna/Neumarkt,3,Egna,Neumarkt,40663.56223978919,29839.35,2277,2019
+29,030,Falzes/Pfalzen,3,Falzes,Pfalzen,48531.25154320987,35839.57,1134,2019
+30,031,Fiè allo Sciliar/Völs am Schlern,3,Fiè allo Sciliar,Völs am Schlern,44386.45217573222,30404.0,1434,2019
+31,032,Fortezza/Franzensfeste,3,Fortezza,Franzensfeste,34396.50459798995,25711.0,398,2019
+32,033,Funes/Villnöß,3,Funes,Villnöß,41817.90803191489,33774.845,940,2019
+33,034,Gais/Gais,3,Gais,Gais,44392.9893911007,34080.0,1281,2019
+34,035,Gargazzone/Gargazon,3,Gargazzone,Gargazon,44517.570932784634,33233.0,729,2019
+35,036,Glorenza/Glurns,3,Glorenza,Glurns,37107.21243093923,28722.0,362,2019
+36,037,Laces/Latsch,3,Laces,Latsch,38067.62375893282,29368.0,2099,2019
+37,038,Lagundo/Algund,2,Lagundo,Algund,43687.4083310408,30353.0,2181,2019
+38,039,Laion/Lajen,3,Laion,Lajen,40571.22214421252,31463.5,1054,2019
+39,040,Laives/Leifers,2,Laives,Leifers,37589.86395149404,31002.0,7463,2019
+40,041,Lana/Lana,2,Lana,Lana,41396.51021387283,30389.5,5190,2019
+41,042,Lasa/Laas,3,Lasa,Laas,35092.42570965651,27076.0,1543,2019
+42,043,Lauregno/Laurein,3,Lauregno,Laurein,40665.91554545455,34078.505000000005,110,2019
+43,044,Luson/Lüsen,3,Luson,Lüsen,42939.08207079646,35495.93,565,2019
+44,045,Magrè sulla strada del vino/Margreid an der Weinstraße,3,Magrè sulla strada del vino,Margreid an der Weinstraße,36519.08929657794,28371.5,526,2019
+45,046,Malles Venosta/Mals,3,Malles Venosta,Mals,35495.52002038736,26909.995000000003,1962,2019
+46,047,Marebbe/Enneberg,3,Marebbe,Enneberg,46881.90916958042,34492.0,1144,2019
+47,048,Marlengo/Marling,2,Marlengo,Marling,40577.13755860954,30094.0,1237,2019
+48,049,Martello/Martell,3,Martello,Martell,33584.43702531645,30339.22,316,2019
+49,050,Meltina/Mölten,3,Meltina,Mölten,41963.856863711,34553.46,609,2019
+50,051,Merano/Meran,2,Merano,Meran,39038.821109867975,28258.485,17876,2019
+51,052,Monguelfo-Tesido/Welsberg-Taisten,3,Monguelfo-Tesido,Welsberg-Taisten,42219.145683646115,34074.0,1119,2019
+52,053,Montagna/Montan,3,Montagna sulla strada del vino,Montan an der Weinstraße,42938.784,30553.195,690,2019
+53,054,Moso in Passiria/Moos in Passeier,3,Moso in Passiria,Moos in Passeier,36509.65091549296,27689.85,710,2019
+54,055,Nalles/Nals,3,Nalles,Nals,42870.1606779661,31560.5,826,2019
+55,056,Naturno/Naturns,3,Naturno,Naturns,39419.944262847515,31112.655,2374,2019
+56,057,Naz-Sciaves/Natz-Schabs,3,Naz-Sciaves,Natz-Schabs,45928.016575342466,36792.85,1241,2019
+57,058,Nova Levante/Welschnofen,3,Nova Levante,Welschnofen,45639.644959537574,31828.0,865,2019
+58,059,Nova Ponente/Deutschnofen,3,Nova Ponente,Deutschnofen,45612.49095145631,33848.0,1545,2019
+59,060,Ora/Auer,3,Ora,Auer,40227.87208281829,30613.0,1618,2019
+60,061,Ortisei/St. Ulrich,2,Ortisei,St. Ulrich,48162.38095287416,33052.0,1931,2019
+61,062,Parcines/Partschins,3,Parcines,Partschins,40183.80270588235,32083.5,1530,2019
+62,063,Perca/Percha,3,Perca,Percha,45695.05573268921,36838.0,621,2019
+63,064,Plaus/Plaus,3,Plaus,Plaus,40518.18555555555,32581.0,279,2019
+64,065,Ponte Gardena/Waidbruck,3,Ponte Gardena,Waidbruck,37988.67301204819,23558.0,83,2019
+65,066,Postal/Burgstall,3,Postal,Burgstall,43603.364501246884,34006.354999999996,802,2019
+66,067,Prato allo Stelvio/Prad am Stilfserjoch,3,Prato allo Stelvio,Prad am Stilfserjoch,36478.538404401654,28786.364999999998,1454,2019
+67,068,Predoi/Prettau,3,Predoi,Prettau,34243.4847368421,29320.370000000003,228,2019
+68,069,Proves/Proveis,3,Proves,Proveis,41749.30021276596,29654.0,94,2019
+69,070,Racines/Ratschings,3,Racines,Ratschings,44146.30561423651,35846.5,1742,2019
+70,071,Rasun-Anterselva/Rasen-Antholz,3,Rasun-Anterselva,Rasen-Antholz,43265.657785714284,35523.0,1120,2019
+71,072,Renon/Ritten,3,Renon,Ritten,45404.94809784358,33636.65,3107,2019
+72,073,Rifiano/Riffian,3,Rifiano,Riffian,38628.13560836502,30324.675,526,2019
+73,074,Rio di Pusteria/Mühlbach,3,Rio di Pusteria,Mühlbach,44031.56107535987,34740.5,1181,2019
+74,075,Rodengo/Rodeneck,3,Rodengo,Rodeneck,42153.97449064449,32810.74,481,2019
+75,076,Salorno sulla strada del vino/Salurn an der Weinstraße,3,Salorno sulla strada del vino,Salurn an der Weinstraße,34306.55676312248,25288.0,1486,2019
+76,077,San Candido/Innichen,3,San Candido,Innichen,47618.80793023256,35443.1,1290,2019
+77,079,San Genesio Atesino/Jenesien,3,San Genesio Atesino,Jenesien,45725.68237640937,35099.11,1153,2019
+78,080,San Leonardo in Passiria/St. Leonhard in Passeier,3,San Leonardo in Passiria,St. Leonhard in Passeier,36884.35394117647,29362.5,1360,2019
+79,081,San Lorenzo di Sebato/St. Lorenzen,3,San Lorenzo di Sebato,St. Lorenzen,46145.779469798654,36472.259999999995,1490,2019
+80,082,San Martino in Badia/St. Martin in Thurn,3,San Martino in Badia,St. Martin in Thurn,44395.69588419406,34468.0,639,2019
+81,083,San Martino in Passiria/St. Martin in Passeier,3,San Martino in Passiria,St. Martin in Passeier,35677.86499193549,28254.489999999998,1240,2019
+82,084,San Pancrazio/St. Pankraz,3,San Pancrazio,St. Pankraz,38170.6538869863,31595.0,584,2019
+83,085,Santa Cristina Valgardena/St. Christina in Gröden,3,Santa Cristina Valgardena,St. Christina in Gröden,46933.80624365482,35965.0,788,2019
+84,086,Sarentino/Sarntal,3,Sarentino,Sarntal,38851.2462956335,31144.879999999997,2794,2019
+85,087,Scena/Schenna,3,Scena,Schenna,45279.142846648305,33363.0,1089,2019
+86,088,Selva dei Molini/Mühlwald,3,Selva dei Molini,Mühlwald,40696.88190926276,32411.0,529,2019
+87,089,Selva di Val Gardena/Wolkenstein in Gröden,3,Selva di Val Gardena,Wolkenstein in Gröden,61791.28106230847,38914.0,979,2019
+88,091,Senales/Schnals,3,Senales,Schnals,40201.19286902287,30228.99,481,2019
+89,092,Sesto/Sexten,3,Sesto,Sexten,44582.233918741804,32408.91,763,2019
+90,093,Silandro/Schlanders,2,Silandro,Schlanders,40826.083464823096,30554.0,2459,2019
+91,094,Sluderno/Schluderns,3,Sluderno,Schluderns,31630.798569463546,26066.0,727,2019
+92,095,Stelvio/Stilfs,3,Stelvio,Stilfs,39110.34164241164,27433.0,481,2019
+93,096,Terento/Terenten,3,Terento,Terenten,44747.090484114975,37404.0,661,2019
+94,097,Terlano/Terlan,3,Terlano,Terlan,46521.28049835706,35003.5,1826,2019
+95,098,Termeno sulla strada del vino/Tramin an der Weinstraße,3,Termeno sulla strada del vino,Tramin an der Weinstraße,39649.04468637347,29446.78,1387,2019
+96,099,Tesimo/Tisens,3,Tesimo,Tisens,36986.257117794485,28733.0,798,2019
+97,100,Tires/Tiers,3,Tires,Tiers,44972.36882793017,34593.0,401,2019
+98,101,Tirolo/Tirol,3,Tirolo,Tirol,47317.85326592518,33460.0,989,2019
+99,102,Trodena nel parco naturale/Truden im Naturpark,3,Trodena nel parco naturale,Truden im Naturpark,38920.46648960739,30746.86,433,2019
+100,103,Tubre/Taufers im Münstertal,3,Tubre,Taufers im Münstertal,24202.566136363635,19868.485,352,2019
+101,104,Ultimo/Ulten,3,Ultimo,Ulten,39044.88787934187,30970.655,1094,2019
+102,105,Vadena/Pfatten,3,Vadena,Pfatten,37873.51412048192,32861.0,415,2019
+103,106,Valdaora/Olang,3,Valdaora,Olang,46546.33535108959,37099.0,1239,2019
+104,107,Val di Vizze/Pfitsch,3,Val di Vizze,Pfitsch,42033.85803030303,33471.22,1188,2019
+105,108,Valle Aurina/Ahrntal,3,Valle Aurina,Ahrntal,41926.17344291426,33416.0,2251,2019
+106,109,Valle di Casies/Gsies,3,Valle di Casies,Gsies,43112.051593830336,36288.0,778,2019
+107,110,Vandoies/Vintl,3,Vandoies,Vintl,41635.90615689382,34672.7,1262,2019
+108,111,Varna/Vahrn,3,Varna,Vahrn,45463.6078952935,34163.0,1891,2019
+109,112,Verano/Vöran,3,Verano,Vöran,43215.784561933535,34618.0,331,2019
+110,113,Villabassa/Niederdorf,3,Villabassa,Niederdorf,39000.27614035088,32705.0,627,2019
+111,114,Villandro/Villanders,3,Villandro,Villanders,41942.2115406562,34832.88,701,2019
+112,115,Vipiteno/Sterzing,2,Vipiteno,Sterzing,40129.17319198664,30349.0,2995,2019
+113,116,Velturno/Feldthurns,3,Velturno,Feldthurns,44065.88696461825,36057.545,1074,2019
+114,117,La Valle/Wengen,3,La Valle,Wengen,48456.53849576272,40379.5,472,2019
+115,118,Senale-San Felice/Unsere Liebe Frau im Walde-St. Felix,3,Senale-San Felice,Unsere Liebe Frau im Walde-St. Felix,33410.329594594594,25882.34,296,2019
+117,001,Aldino/Aldein,3,Aldino,Aldein,40142.411248000004,31168.0,625,2020
+118,002,Andriano/Andrian,3,Andriano,Andrian,40827.20589622642,31395.68,424,2020
+119,003,Anterivo/Altrei,3,Anterivo,Altrei,31395.044519774012,26653.54,177,2020
+120,004,Appiano sulla strada del vino/Eppan an der Weinstraße,2,Appiano sulla strada del vino,Eppan an der Weinstraße,46972.10611002921,32305.405,6162,2020
+121,005,Avelengo/Hafling,3,Avelengo,Hafling,44889.427156862745,33600.14,306,2020
+122,006,Badia/Abtei,3,Badia,Abtei,48298.44492236025,34343.0,1288,2020
+123,007,Barbiano/Barbian,3,Barbiano,Barbian,38718.14085755814,29751.89,688,2020
+124,008,Bolzano/Bozen,1,Bolzano,Bozen,39959.09511774805,28865.19,47177,2020
+125,009,Braies/Prags,3,Braies,Prags,47349.044471544716,35742.5,246,2020
+126,010,Brennero/Brenner,3,Brennero,Brenner,35947.91001027749,27675.0,973,2020
+127,011,Bressanone/Brixen,2,Bressanone,Brixen,44330.66279309236,31827.0,9323,2020
+128,012,Bronzolo/Branzoll,2,Bronzolo,Branzoll,38265.2746397188,31720.425,1138,2020
+129,013,Brunico/Bruneck,2,Brunico,Bruneck,45089.54209411117,31962.0,7268,2020
+130,014,Caines/Kuens,2,Caines,Kuens,37889.9372368421,29392.73,152,2020
+131,015,Caldaro sulla strada del vino/Kaltern an der Weinstraße,2,Caldaro sulla strada del vino,Kaltern an der Weinstraße,40753.47349497339,30130.5,3382,2020
+132,016,Campo di Trens/Freienfeld,3,Campo di Trens,Freienfeld,38581.94921641791,32773.325,1072,2020
+133,017,Campo Tures/Sand in Taufers,3,Campo Tures,Sand in Taufers,40426.45377245509,30903.5,2338,2020
+134,018,Castelbello-Ciardes/Kastelbell-Tschars,3,Castelbello-Ciardes,Kastelbell-Tschars,36199.1740552017,26942.0,942,2020
+135,019,Castelrotto/Kastelruth,3,Castelrotto,Kastelruth,41729.86324624195,29616.765,2794,2020
+136,020,Cermes/Tscherms,2,Cermes,Tscherms,40489.048728139904,32643.0,629,2020
+137,021,Chienes/Kiens,3,Chienes,Kiens,46085.39869492935,34804.0,1203,2020
+138,022,Chiusa/Klausen,3,Chiusa,Klausen,41962.20248908297,32244.14,2061,2020
+139,023,Cornedo all'Isarco/Karneid,3,Cornedo all'Isarco,Karneid,40130.27241635688,31322.0,1345,2020
+140,024,Cortaccia sulla strada del vino/Kurtatsch an der Weinstraße,3,Cortaccia sulla strada del vino,Kurtatsch an der Weinstraße,38056.24580396475,28035.5,908,2020
+141,025,Cortina sulla strada del vino/Kurtinig an der Weinstraße,3,Cortina sulla strada del vino,Kurtinig an der Weinstraße,36202.94160839161,27305.0,286,2020
+142,026,Corvara in Badia/Corvara,3,Corvara in Badia,Corvara,50510.06319419238,33957.0,551,2020
+143,027,Curon Venosta/Graun im Vinschgau,3,Curon Venosta,Graun im Vinschgau,33948.65741418764,26195.5,874,2020
+144,028,Dobbiaco/Toblach,3,Dobbiaco,Toblach,42233.88874807987,32931.325,1302,2020
+145,029,Egna/Neumarkt,3,Egna,Neumarkt,40624.402552631575,29878.5,2280,2020
+146,030,Falzes/Pfalzen,3,Falzes,Pfalzen,48554.54119108826,35317.0,1167,2020
+147,031,Fiè allo Sciliar/Völs am Schlern,3,Fiè allo Sciliar,Völs am Schlern,42713.2722366621,29893.0,1462,2020
+148,032,Fortezza/Franzensfeste,3,Fortezza,Franzensfeste,32622.41359413203,25671.0,409,2020
+149,033,Funes/Villnöß,3,Funes,Villnöß,40590.512242105266,33119.06,950,2020
+150,034,Gais/Gais,3,Gais,Gais,43395.69006976744,33524.19,1290,2020
+151,035,Gargazzone/Gargazon,3,Gargazzone,Gargazon,45396.267750000006,32765.0,760,2020
+152,036,Glorenza/Glurns,3,Glorenza,Glurns,35368.43278688525,29146.5,366,2020
+153,037,Laces/Latsch,3,Laces,Latsch,36726.481417875526,28112.56,2137,2020
+154,038,Lagundo/Algund,2,Lagundo,Algund,41413.598713826366,29397.0,2177,2020
+155,039,Laion/Lajen,3,Laion,Lajen,38315.37037428023,31012.0,1042,2020
+156,040,Laives/Leifers,2,Laives,Leifers,37401.74365298013,31072.68,7550,2020
+157,041,Lana/Lana,2,Lana,Lana,40822.544180867546,29601.5,5164,2020
+158,042,Lasa/Laas,3,Lasa,Laas,35157.52708173691,27805.0,1566,2020
+159,043,Lauregno/Laurein,3,Lauregno,Laurein,41162.89234234234,37388.0,111,2020
+160,044,Luson/Lüsen,3,Luson,Lüsen,40875.04660869565,33920.56,575,2020
+161,045,Magrè sulla strada del vino/Margreid an der Weinstraße,3,Magrè sulla strada del vino,Margreid an der Weinstraße,35082.02438563327,28159.0,529,2020
+162,046,Malles Venosta/Mals,3,Malles Venosta,Mals,34073.68683838384,26646.0,1980,2020
+163,047,Marebbe/Enneberg,3,Marebbe,Enneberg,43031.610499561786,32422.0,1141,2020
+164,048,Marlengo/Marling,2,Marlengo,Marling,38757.99547385621,29180.5,1224,2020
+165,049,Martello/Martell,3,Martello,Martell,33175.5893081761,29492.5,318,2020
+166,050,Meltina/Mölten,3,Meltina,Mölten,41164.854782608694,33079.0,621,2020
+167,051,Merano/Meran,2,Merano,Meran,38234.28283028314,27861.85,17977,2020
+168,052,Monguelfo-Tesido/Welsberg-Taisten,3,Monguelfo-Tesido,Welsberg-Taisten,41559.77535335689,33562.5,1132,2020
+169,053,Montagna/Montan,3,Montagna sulla strada del vino,Montan an der Weinstraße,41396.96243867244,30224.0,693,2020
+170,054,Moso in Passiria/Moos in Passeier,3,Moso in Passiria,Moos in Passeier,33155.755894590846,25820.0,721,2020
+171,055,Nalles/Nals,3,Nalles,Nals,42026.825337278104,31146.0,845,2020
+172,056,Naturno/Naturns,3,Naturno,Naturns,38433.01692686935,30076.614999999998,2434,2020
+173,057,Naz-Sciaves/Natz-Schabs,3,Naz-Sciaves,Natz-Schabs,44346.04569749216,35079.445,1276,2020
+174,058,Nova Levante/Welschnofen,3,Nova Levante,Welschnofen,43512.46622322435,31148.0,887,2020
+175,059,Nova Ponente/Deutschnofen,3,Nova Ponente,Deutschnofen,43416.68963855422,33004.0,1577,2020
+176,060,Ora/Auer,3,Ora,Auer,39920.74769466585,30008.0,1631,2020
+177,061,Ortisei/St. Ulrich,2,Ortisei,St. Ulrich,44790.14490984029,31211.18,1941,2020
+178,062,Parcines/Partschins,3,Parcines,Partschins,38494.63657234726,30064.0,1555,2020
+179,063,Perca/Percha,3,Perca,Percha,44741.048467614535,35073.0,633,2020
+180,064,Plaus/Plaus,3,Plaus,Plaus,36288.37513986014,29066.5,286,2020
+181,065,Ponte Gardena/Waidbruck,3,Ponte Gardena,Waidbruck,35189.524333333335,22303.5,90,2020
+182,066,Postal/Burgstall,3,Postal,Burgstall,42444.22945745993,33292.0,811,2020
+183,067,Prato allo Stelvio/Prad am Stilfserjoch,3,Prato allo Stelvio,Prad am Stilfserjoch,35794.3434659474,28575.0,1483,2020
+184,068,Predoi/Prettau,3,Predoi,Prettau,33174.58583690987,28108.0,233,2020
+185,069,Proves/Proveis,3,Proves,Proveis,38858.04436170213,26956.0,94,2020
+186,070,Racines/Ratschings,3,Racines,Ratschings,41446.85164705882,34143.0,1785,2020
+187,071,Rasun-Anterselva/Rasen-Antholz,3,Rasun-Anterselva,Rasen-Antholz,42430.72329777778,34955.0,1125,2020
+188,072,Renon/Ritten,3,Renon,Ritten,44903.6329873817,33560.0,3170,2020
+189,073,Rifiano/Riffian,3,Rifiano,Riffian,36708.76159474671,29340.0,533,2020
+190,074,Rio di Pusteria/Mühlbach,3,Rio di Pusteria,Mühlbach,41353.95055740433,32537.57,1202,2020
+191,075,Rodengo/Rodeneck,3,Rodengo,Rodeneck,39219.7818852459,30403.0,488,2020
+192,076,Salorno sulla strada del vino/Salurn an der Weinstraße,3,Salorno sulla strada del vino,Salurn an der Weinstraße,34219.738810483876,25031.205,1488,2020
+193,077,San Candido/Innichen,3,San Candido,Innichen,45752.768609625666,34322.0,1309,2020
+194,079,San Genesio Atesino/Jenesien,3,San Genesio Atesino,Jenesien,44793.6519537275,34405.22,1167,2020
+195,080,San Leonardo in Passiria/St. Leonhard in Passeier,3,San Leonardo in Passiria,St. Leonhard in Passeier,35342.827396664245,28266.0,1379,2020
+196,081,San Lorenzo di Sebato/St. Lorenzen,3,San Lorenzo di Sebato,St. Lorenzen,44294.53963133641,34909.0,1519,2020
+197,082,San Martino in Badia/St. Martin in Thurn,3,San Martino in Badia,St. Martin in Thurn,41973.97477996965,32659.0,659,2020
+198,083,San Martino in Passiria/St. Martin in Passeier,3,San Martino in Passiria,St. Martin in Passeier,33577.99363057325,27119.5,1256,2020
+199,084,San Pancrazio/St. Pankraz,3,San Pancrazio,St. Pankraz,38176.136183986375,30211.0,587,2020
+200,085,Santa Cristina Valgardena/St. Christina in Gröden,3,Santa Cristina Valgardena,St. Christina in Gröden,42357.691385390426,32175.77,794,2020
+201,086,Sarentino/Sarntal,3,Sarentino,Sarntal,38503.57837962963,30652.0,2808,2020
+202,087,Scena/Schenna,3,Scena,Schenna,37958.74112410072,29833.43,1112,2020
+203,088,Selva dei Molini/Mühlwald,3,Selva dei Molini,Mühlwald,40033.59512428298,31688.68,523,2020
+204,089,Selva di Val Gardena/Wolkenstein in Gröden,3,Selva di Val Gardena,Wolkenstein in Gröden,49094.06477596741,33094.5,982,2020
+205,091,Senales/Schnals,3,Senales,Schnals,37286.340807453416,28426.0,483,2020
+206,092,Sesto/Sexten,3,Sesto,Sexten,40960.186485788116,30089.84,774,2020
+207,093,Silandro/Schlanders,2,Silandro,Schlanders,40346.15911306433,29686.97,2503,2020
+208,094,Sluderno/Schluderns,3,Sluderno,Schluderns,31190.321145975442,25169.0,733,2020
+209,095,Stelvio/Stilfs,3,Stelvio,Stilfs,34629.6132238193,25347.57,487,2020
+210,096,Terento/Terenten,3,Terento,Terenten,44518.45250750751,35687.0,666,2020
+211,097,Terlano/Terlan,3,Terlano,Terlan,45850.9680982906,34861.335,1872,2020
+212,098,Termeno sulla strada del vino/Tramin an der Weinstraße,3,Termeno sulla strada del vino,Tramin an der Weinstraße,38054.45203558719,28083.0,1405,2020
+213,099,Tesimo/Tisens,3,Tesimo,Tisens,36333.50293601004,27368.11,797,2020
+214,100,Tires/Tiers,3,Tires,Tiers,42792.634359605916,33625.0,406,2020
+215,101,Tirolo/Tirol,3,Tirolo,Tirol,40275.03569416499,28795.5,994,2020
+216,102,Trodena nel parco naturale/Truden im Naturpark,3,Trodena nel parco naturale,Truden im Naturpark,38734.78431554524,30622.88,431,2020
+217,103,Tubre/Taufers im Münstertal,3,Tubre,Taufers im Münstertal,25651.0959375,20165.045,352,2020
+218,104,Ultimo/Ulten,3,Ultimo,Ulten,37083.78118766999,29925.0,1103,2020
+219,105,Vadena/Pfatten,3,Vadena,Pfatten,37636.718888888885,31572.0,423,2020
+220,106,Valdaora/Olang,3,Valdaora,Olang,45064.295875202595,36214.009999999995,1234,2020
+221,107,Val di Vizze/Pfitsch,3,Val di Vizze,Pfitsch,41246.00659331703,32403.0,1227,2020
+222,108,Valle Aurina/Ahrntal,3,Valle Aurina,Ahrntal,39835.76785682916,31760.48,2277,2020
+223,109,Valle di Casies/Gsies,3,Valle di Casies,Gsies,41623.71433080808,35245.0,792,2020
+224,110,Vandoies/Vintl,3,Vandoies,Vintl,41637.1060994561,33896.0,1287,2020
+225,111,Varna/Vahrn,3,Varna,Vahrn,43851.84433785193,32906.0,1918,2020
+226,112,Verano/Vöran,3,Verano,Vöran,40982.86044378698,34032.5,338,2020
+227,113,Villabassa/Niederdorf,3,Villabassa,Niederdorf,38885.083387096776,31663.5,620,2020
+228,114,Villandro/Villanders,3,Villandro,Villanders,40110.92203651685,33185.625,712,2020
+229,115,Vipiteno/Sterzing,2,Vipiteno,Sterzing,38919.37295911528,29463.5,2984,2020
+230,116,Velturno/Feldthurns,3,Velturno,Feldthurns,43889.76811233886,34169.645000000004,1086,2020
+231,117,La Valle/Wengen,3,La Valle,Wengen,46109.4050533049,38444.0,469,2020
+232,118,Senale-San Felice/Unsere Liebe Frau im Walde-St. Felix,3,Senale-San Felice,Unsere Liebe Frau im Walde-St. Felix,32972.66206779661,26058.0,295,2020
+234,001,Aldino/Aldein,3,Aldino,Aldein,43503.41870759289,32527.43,619,2021
+235,002,Andriano/Andrian,3,Andriano,Andrian,43698.59548463357,32680.0,423,2021
+236,003,Anterivo/Altrei,3,Anterivo,Altrei,33124.04262569833,27138.0,179,2021
+237,004,Appiano sulla strada del vino/Eppan an der Weinstraße,2,Appiano sulla strada del vino,Eppan an der Weinstraße,48562.65603009445,33580.0,6247,2021
+238,005,Avelengo/Hafling,3,Avelengo,Hafling,47426.73588424437,34386.0,311,2021
+239,006,Badia/Abtei,3,Badia,Abtei,45266.74040863531,32793.0,1297,2021
+240,007,Barbiano/Barbian,3,Barbiano,Barbian,40396.44917151163,30828.425,688,2021
+241,008,Bolzano/Bozen,1,Bolzano,Bozen,41498.30292539267,29758.5,47368,2021
+242,009,Braies/Prags,3,Braies,Prags,48777.40829959514,39346.0,247,2021
+243,010,Brennero/Brenner,3,Brennero,Brenner,36107.21007007007,28071.59,999,2021
+244,011,Bressanone/Brixen,2,Bressanone,Brixen,46221.73828696301,32924.0,9381,2021
+245,012,Bronzolo/Branzoll,2,Bronzolo,Branzoll,39845.75956859362,33258.0,1159,2021
+246,013,Brunico/Bruneck,2,Brunico,Bruneck,46545.77763909571,32475.0,7387,2021
+247,014,Caines/Kuens,2,Caines,Kuens,39288.772532467534,30091.525,154,2021
+248,015,Caldaro sulla strada del vino/Kaltern an der Weinstraße,2,Caldaro sulla strada del vino,Kaltern an der Weinstraße,43653.11435431919,32724.14,3415,2021
+249,016,Campo di Trens/Freienfeld,3,Campo di Trens,Freienfeld,41455.4950754717,33996.0,1060,2021
+250,017,Campo Tures/Sand in Taufers,3,Campo Tures,Sand in Taufers,41620.85463281578,31666.0,2383,2021
+251,018,Castelbello-Ciardes/Kastelbell-Tschars,3,Castelbello-Ciardes,Kastelbell-Tschars,38667.544508547006,27367.0,936,2021
+252,019,Castelrotto/Kastelruth,3,Castelrotto,Kastelruth,42332.673957431456,30430.0,2772,2021
+253,020,Cermes/Tscherms,2,Cermes,Tscherms,44208.04607874016,32940.0,635,2021
+254,021,Chienes/Kiens,3,Chienes,Kiens,47632.339714285714,34884.0,1225,2021
+255,022,Chiusa/Klausen,3,Chiusa,Klausen,43791.16293692826,33844.56,2077,2021
+256,023,Cornedo all'Isarco/Karneid,3,Cornedo all'Isarco,Karneid,41834.47972161172,33046.93,1365,2021
+257,024,Cortaccia sulla strada del vino/Kurtatsch an der Weinstraße,3,Cortaccia sulla strada del vino,Kurtatsch an der Weinstraße,40282.082812500004,29531.004999999997,896,2021
+258,025,Cortina sulla strada del vino/Kurtinig an der Weinstraße,3,Cortina sulla strada del vino,Kurtinig an der Weinstraße,37294.853344709896,27383.64,293,2021
+259,026,Corvara in Badia/Corvara,3,Corvara in Badia,Corvara,42253.59230347349,29190.0,547,2021
+260,027,Curon Venosta/Graun im Vinschgau,3,Curon Venosta,Graun im Vinschgau,32435.601340909092,25531.0,880,2021
+261,028,Dobbiaco/Toblach,3,Dobbiaco,Toblach,43067.30732211171,32761.0,1307,2021
+262,029,Egna/Neumarkt,3,Egna,Neumarkt,43304.19311682651,31532.5,2294,2021
+263,030,Falzes/Pfalzen,3,Falzes,Pfalzen,50397.74418410042,37680.0,1195,2021
+264,031,Fiè allo Sciliar/Völs am Schlern,3,Fiè allo Sciliar,Völs am Schlern,44687.086243206526,30774.515,1472,2021
+265,032,Fortezza/Franzensfeste,3,Fortezza,Franzensfeste,33749.95575117371,26635.85,426,2021
+266,033,Funes/Villnöß,3,Funes,Villnöß,42549.67905063291,33828.0,948,2021
+267,034,Gais/Gais,3,Gais,Gais,45120.12807573415,35417.0,1294,2021
+268,035,Gargazzone/Gargazon,3,Gargazzone,Gargazon,49582.06941253264,34538.235,766,2021
+269,036,Glorenza/Glurns,3,Glorenza,Glurns,36058.7725613079,29465.0,367,2021
+270,037,Laces/Latsch,3,Laces,Latsch,38893.05959107806,29969.0,2152,2021
+271,038,Lagundo/Algund,2,Lagundo,Algund,43882.31744972578,31277.5,2188,2021
+272,039,Laion/Lajen,3,Laion,Lajen,40596.06893231649,33359.0,1049,2021
+273,040,Laives/Leifers,2,Laives,Leifers,39227.3134638119,32038.0,7613,2021
+274,041,Lana/Lana,2,Lana,Lana,43437.18881740776,30751.31,5285,2021
+275,042,Lasa/Laas,3,Lasa,Laas,36727.26758488149,28950.0,1561,2021
+276,043,Lauregno/Laurein,3,Lauregno,Laurein,45071.53552380953,41904.0,105,2021
+277,044,Luson/Lüsen,3,Luson,Lüsen,42284.79214041096,35101.045,584,2021
+278,045,Magrè sulla strada del vino/Margreid an der Weinstraße,3,Magrè sulla strada del vino,Margreid an der Weinstraße,36913.079397363465,29872.0,531,2021
+279,046,Malles Venosta/Mals,3,Malles Venosta,Mals,35524.78612337011,27619.765,1994,2021
+280,047,Marebbe/Enneberg,3,Marebbe,Enneberg,43570.293054101225,31029.745000000003,1146,2021
+281,048,Marlengo/Marling,2,Marlengo,Marling,42076.084548361316,31074.0,1251,2021
+282,049,Martello/Martell,3,Martello,Martell,34785.263492063496,31158.0,315,2021
+283,050,Meltina/Mölten,3,Meltina,Mölten,43664.69723004695,35354.0,639,2021
+284,051,Merano/Meran,2,Merano,Meran,40175.74226222371,28901.83,17916,2021
+285,052,Monguelfo-Tesido/Welsberg-Taisten,3,Monguelfo-Tesido,Welsberg-Taisten,43011.00829225352,35072.0,1136,2021
+286,053,Montagna/Montan,3,Montagna sulla strada del vino,Montan an der Weinstraße,43996.38083936324,31516.0,691,2021
+287,054,Moso in Passiria/Moos in Passeier,3,Moso in Passiria,Moos in Passeier,34737.57153739612,26310.645,722,2021
+288,055,Nalles/Nals,3,Nalles,Nals,43577.64237880496,31943.0,887,2021
+289,056,Naturno/Naturns,3,Naturno,Naturns,40150.22893617021,31621.0,2491,2021
+290,057,Naz-Sciaves/Natz-Schabs,3,Naz-Sciaves,Natz-Schabs,47066.472293794184,36958.0,1273,2021
+291,058,Nova Levante/Welschnofen,3,Nova Levante,Welschnofen,42851.43919191919,32424.0,891,2021
+292,059,Nova Ponente/Deutschnofen,3,Nova Ponente,Deutschnofen,44723.5326821608,33582.5,1592,2021
+293,060,Ora/Auer,3,Ora,Auer,41355.29681846154,31115.0,1625,2021
+294,061,Ortisei/St. Ulrich,2,Ortisei,St. Ulrich,46525.602928205124,32221.239999999998,1950,2021
+295,062,Parcines/Partschins,3,Parcines,Partschins,40701.18164452878,32564.0,1581,2021
+296,063,Perca/Percha,3,Perca,Percha,46111.6899379845,36450.0,645,2021
+297,064,Plaus/Plaus,3,Plaus,Plaus,40813.824056939506,31340.0,281,2021
+298,065,Ponte Gardena/Waidbruck,3,Ponte Gardena,Waidbruck,36225.57325581395,25409.135000000002,86,2021
+299,066,Postal/Burgstall,3,Postal,Burgstall,46098.10060961313,34488.34,853,2021
+300,067,Prato allo Stelvio/Prad am Stilfserjoch,3,Prato allo Stelvio,Prad am Stilfserjoch,37053.45116788321,29017.0,1507,2021
+301,068,Predoi/Prettau,3,Predoi,Prettau,32506.884915966388,27198.34,238,2021
+302,069,Proves/Proveis,3,Proves,Proveis,40348.534782608695,26670.0,92,2021
+303,070,Racines/Ratschings,3,Racines,Ratschings,42943.976426211455,34834.725,1816,2021
+304,071,Rasun-Anterselva/Rasen-Antholz,3,Rasun-Anterselva,Rasen-Antholz,44883.05334801762,34807.0,1135,2021
+305,072,Renon/Ritten,3,Renon,Ritten,47770.997310819264,34640.0,3198,2021
+306,073,Rifiano/Riffian,3,Rifiano,Riffian,38878.42567970205,30109.0,537,2021
+307,074,Rio di Pusteria/Mühlbach,3,Rio di Pusteria,Mühlbach,41416.17735197368,32934.0,1216,2021
+308,075,Rodengo/Rodeneck,3,Rodengo,Rodeneck,42392.78760824742,31699.12,485,2021
+309,076,Salorno sulla strada del vino/Salurn an der Weinstraße,3,Salorno sulla strada del vino,Salurn an der Weinstraße,35718.521511081264,26356.4,1489,2021
+310,077,San Candido/Innichen,3,San Candido,Innichen,45259.07097505669,33508.0,1323,2021
+311,079,San Genesio Atesino/Jenesien,3,San Genesio Atesino,Jenesien,47927.818561643835,35601.045,1168,2021
+312,080,San Leonardo in Passiria/St. Leonhard in Passeier,3,San Leonardo in Passiria,St. Leonhard in Passeier,36989.09615827338,28889.0,1390,2021
+313,081,San Lorenzo di Sebato/St. Lorenzen,3,San Lorenzo di Sebato,St. Lorenzen,46671.33017094017,36173.0,1521,2021
+314,082,San Martino in Badia/St. Martin in Thurn,3,San Martino in Badia,St. Martin in Thurn,41088.52023845007,31352.0,671,2021
+315,083,San Martino in Passiria/St. Martin in Passeier,3,San Martino in Passiria,St. Martin in Passeier,36312.33956383822,28374.41,1261,2021
+316,084,San Pancrazio/St. Pankraz,3,San Pancrazio,St. Pankraz,39668.28604377104,31409.375,594,2021
+317,085,Santa Cristina Valgardena/St. Christina in Gröden,3,Santa Cristina Valgardena,St. Christina in Gröden,40419.6944638404,29832.0,802,2021
+318,086,Sarentino/Sarntal,3,Sarentino,Sarntal,40389.72357622922,31452.0,2827,2021
+319,087,Scena/Schenna,3,Scena,Schenna,41579.32333630687,32360.0,1121,2021
+320,088,Selva dei Molini/Mühlwald,3,Selva dei Molini,Mühlwald,41426.0121042471,33138.0,518,2021
+321,089,Selva di Val Gardena/Wolkenstein in Gröden,3,Selva di Val Gardena,Wolkenstein in Gröden,46286.63488465396,30878.0,997,2021
+322,091,Senales/Schnals,3,Senales,Schnals,36974.43750511248,30038.0,489,2021
+323,092,Sesto/Sexten,3,Sesto,Sexten,39776.18888743455,30391.405,764,2021
+324,093,Silandro/Schlanders,2,Silandro,Schlanders,42043.235935023775,30652.5,2524,2021
+325,094,Sluderno/Schluderns,3,Sluderno,Schluderns,32585.94476839237,26471.5,734,2021
+326,095,Stelvio/Stilfs,3,Stelvio,Stilfs,35678.928125,25289.835,480,2021
+327,096,Terento/Terenten,3,Terento,Terenten,44292.74148367953,36340.33,674,2021
+328,097,Terlano/Terlan,3,Terlano,Terlan,48618.597905894516,36497.765,1934,2021
+329,098,Termeno sulla strada del vino/Tramin an der Weinstraße,3,Termeno sulla strada del vino,Tramin an der Weinstraße,40424.04841843972,29673.0,1410,2021
+330,099,Tesimo/Tisens,3,Tesimo,Tisens,38637.004955752214,29338.0,791,2021
+331,100,Tires/Tiers,3,Tires,Tiers,43915.585558312654,35196.11,403,2021
+332,101,Tirolo/Tirol,3,Tirolo,Tirol,45232.26121272366,32215.0,1006,2021
+333,102,Trodena nel parco naturale/Truden im Naturpark,3,Trodena nel parco naturale,Truden im Naturpark,42802.48833723653,31690.0,427,2021
+334,103,Tubre/Taufers im Münstertal,3,Tubre,Taufers im Münstertal,26088.68386167147,21131.0,347,2021
+335,104,Ultimo/Ulten,3,Ultimo,Ulten,37165.921379003565,30171.6,1124,2021
+336,105,Vadena/Pfatten,3,Vadena,Pfatten,39143.56789719626,32093.875,428,2021
+337,106,Valdaora/Olang,3,Valdaora,Olang,45765.168148443736,36372.0,1253,2021
+338,107,Val di Vizze/Pfitsch,3,Val di Vizze,Pfitsch,42993.19351524879,33634.0,1246,2021
+339,108,Valle Aurina/Ahrntal,3,Valle Aurina,Ahrntal,40241.551648822264,31983.59,2335,2021
+340,109,Valle di Casies/Gsies,3,Valle di Casies,Gsies,42530.697359198995,36460.0,799,2021
+341,110,Vandoies/Vintl,3,Vandoies,Vintl,44755.97907704043,34328.12,1311,2021
+342,111,Varna/Vahrn,3,Varna,Vahrn,47789.676788617886,34266.195,1968,2021
+343,112,Verano/Vöran,3,Verano,Vöran,44243.20135693215,32940.17,339,2021
+344,113,Villabassa/Niederdorf,3,Villabassa,Niederdorf,39986.540380348655,31660.0,631,2021
+345,114,Villandro/Villanders,3,Villandro,Villanders,41206.24279778393,34034.085,722,2021
+346,115,Vipiteno/Sterzing,2,Vipiteno,Sterzing,39823.710126120146,30030.0,3013,2021
+347,116,Velturno/Feldthurns,3,Velturno,Feldthurns,45817.48633152174,36070.195,1104,2021
+348,117,La Valle/Wengen,3,La Valle,Wengen,45487.52757201646,38286.5,486,2021
+349,118,Senale-San Felice/Unsere Liebe Frau im Walde-St. Felix,3,Senale-San Felice,Unsere Liebe Frau im Walde-St. Felix,35727.61564189189,27692.205,296,2021
+351,001,Aldino/Aldein,3,Aldino,Aldein,45687.38985714286,35181.445,630,2022
+352,002,Andriano/Andrian,3,Andriano,Andrian,45244.765578231294,34650.0,441,2022
+353,003,Anterivo/Altrei,3,Anterivo,Altrei,34234.74320224719,28431.5,178,2022
+354,004,Appiano sulla strada del vino/Eppan an der Weinstraße,2,Appiano sulla strada del vino,Eppan an der Weinstraße,51723.560591372545,35694.64,6375,2022
+355,005,Avelengo/Hafling,3,Avelengo,Hafling,51347.3434169279,35625.64,319,2022
+356,006,Badia/Abtei,3,Badia,Abtei,58542.229334330594,40919.0,1337,2022
+357,007,Barbiano/Barbian,3,Barbiano,Barbian,42657.20396892655,32318.0,708,2022
+358,008,Bolzano/Bozen,1,Bolzano,Bozen,43537.38753117207,30977.5,48120,2022
+359,009,Braies/Prags,3,Braies,Prags,52955.76498007968,42783.0,251,2022
+360,010,Brennero/Brenner,3,Brennero,Brenner,40223.26419642857,30671.5,1008,2022
+361,011,Bressanone/Brixen,2,Bressanone,Brixen,48502.587064401836,34980.045,9596,2022
+362,012,Bronzolo/Branzoll,2,Bronzolo,Branzoll,41892.27512489234,34015.0,1161,2022
+363,013,Brunico/Bruneck,2,Brunico,Bruneck,49706.444608025515,34395.994999999995,7526,2022
+364,014,Caines/Kuens,2,Caines,Kuens,41883.643289473686,34670.979999999996,152,2022
+365,015,Caldaro sulla strada del vino/Kaltern an der Weinstraße,2,Caldaro sulla strada del vino,Kaltern an der Weinstraße,47283.6896929201,34477.0,3517,2022
+366,016,Campo di Trens/Freienfeld,3,Campo di Trens,Freienfeld,43026.412657534245,35499.0,1095,2022
+367,017,Campo Tures/Sand in Taufers,3,Campo Tures,Sand in Taufers,44671.20906890894,33790.384999999995,2438,2022
+368,018,Castelbello-Ciardes/Kastelbell-Tschars,3,Castelbello-Ciardes,Kastelbell-Tschars,41615.113336809176,29327.84,959,2022
+369,019,Castelrotto/Kastelruth,3,Castelrotto,Kastelruth,49566.575155279505,34319.84,2898,2022
+370,020,Cermes/Tscherms,2,Cermes,Tscherms,47393.495938461536,35171.0,650,2022
+371,021,Chienes/Kiens,3,Chienes,Kiens,49787.898337292165,37471.0,1263,2022
+372,022,Chiusa/Klausen,3,Chiusa,Klausen,46711.954938388626,36380.05,2110,2022
+373,023,Cornedo all'Isarco/Karneid,3,Cornedo all'Isarco,Karneid,45110.59608442504,35868.665,1374,2022
+374,024,Cortaccia sulla strada del vino/Kurtatsch an der Weinstraße,3,Cortaccia sulla strada del vino,Kurtatsch an der Weinstraße,44840.78367955801,31610.13,905,2022
+375,025,Cortina sulla strada del vino/Kurtinig an der Weinstraße,3,Cortina sulla strada del vino,Kurtinig an der Weinstraße,39837.532400000004,29749.5,300,2022
+376,026,Corvara in Badia/Corvara,3,Corvara in Badia,Corvara,57862.25292114695,40659.0,558,2022
+377,027,Curon Venosta/Graun im Vinschgau,3,Curon Venosta,Graun im Vinschgau,37973.56073496659,28089.545,898,2022
+378,028,Dobbiaco/Toblach,3,Dobbiaco,Toblach,48338.07125753012,38344.28,1328,2022
+379,029,Egna/Neumarkt,3,Egna,Neumarkt,45574.30955641688,33361.5,2322,2022
+380,030,Falzes/Pfalzen,3,Falzes,Pfalzen,52594.9844200627,39215.0,1276,2022
+381,031,Fiè allo Sciliar/Völs am Schlern,3,Fiè allo Sciliar,Völs am Schlern,49478.19491891892,33970.39,1480,2022
+382,032,Fortezza/Franzensfeste,3,Fortezza,Franzensfeste,34877.69609865471,28215.0,446,2022
+383,033,Funes/Villnöß,3,Funes,Villnöß,46561.65191069574,38138.0,963,2022
+384,034,Gais/Gais,3,Gais,Gais,47800.28239263804,37197.0,1304,2022
+385,035,Gargazzone/Gargazon,3,Gargazzone,Gargazon,47299.31633466136,35673.0,753,2022
+386,036,Glorenza/Glurns,3,Glorenza,Glurns,38136.54397820164,30633.95,367,2022
+387,037,Laces/Latsch,3,Laces,Latsch,41162.08498160074,31005.32,2174,2022
+388,038,Lagundo/Algund,2,Lagundo,Algund,48251.236883891695,34059.85,2179,2022
+389,039,Laion/Lajen,3,Laion,Lajen,44785.4260296846,35625.08,1078,2022
+390,040,Laives/Leifers,2,Laives,Leifers,41497.84345831723,33696.0,7761,2022
+391,041,Lana/Lana,2,Lana,Lana,45860.487722201564,32281.065000000002,5378,2022
+392,042,Lasa/Laas,3,Lasa,Laas,38212.97232747804,30037.5,1594,2022
+393,043,Lauregno/Laurein,3,Lauregno,Laurein,49439.05273584906,41762.0,106,2022
+394,044,Luson/Lüsen,3,Luson,Lüsen,45915.83602272727,37254.0,616,2022
+395,045,Magrè sulla strada del vino/Margreid an der Weinstraße,3,Magrè sulla strada del vino,Margreid an der Weinstraße,39300.83823639775,31112.46,533,2022
+396,046,Malles Venosta/Mals,3,Malles Venosta,Mals,38245.391389162556,29667.375,2030,2022
+397,047,Marebbe/Enneberg,3,Marebbe,Enneberg,49558.894659284495,36838.22,1174,2022
+398,048,Marlengo/Marling,2,Marlengo,Marling,45316.49788476717,34209.0,1267,2022
+399,049,Martello/Martell,3,Martello,Martell,36065.898267477205,32489.76,329,2022
+400,050,Meltina/Mölten,3,Meltina,Mölten,47934.93399691358,36509.5,648,2022
+401,051,Merano/Meran,2,Merano,Meran,42422.556870763176,30601.504999999997,18292,2022
+402,052,Monguelfo-Tesido/Welsberg-Taisten,3,Monguelfo-Tesido,Welsberg-Taisten,46713.71592752373,37235.0,1159,2022
+403,053,Montagna/Montan,3,Montagna sulla strada del vino,Montan an der Weinstraße,45319.412825174826,33141.28,715,2022
+404,054,Moso in Passiria/Moos in Passeier,3,Moso in Passiria,Moos in Passeier,39607.07693681319,29894.405,728,2022
+405,055,Nalles/Nals,3,Nalles,Nals,46131.488756936735,33533.0,901,2022
+406,056,Naturno/Naturns,3,Naturno,Naturns,42895.85802180685,33145.5,2568,2022
+407,057,Naz-Sciaves/Natz-Schabs,3,Naz-Sciaves,Natz-Schabs,48915.399977426634,37868.0,1329,2022
+408,058,Nova Levante/Welschnofen,3,Nova Levante,Welschnofen,47442.81159065628,35205.0,899,2022
+409,059,Nova Ponente/Deutschnofen,3,Nova Ponente,Deutschnofen,48711.83321297429,36676.0,1634,2022
+410,060,Ora/Auer,3,Ora,Auer,44189.612717854965,33216.0,1641,2022
+411,061,Ortisei/St. Ulrich,2,Ortisei,St. Ulrich,54619.14700507614,36371.595,1970,2022
+412,062,Parcines/Partschins,3,Parcines,Partschins,43819.305317559156,34437.835,1606,2022
+413,063,Perca/Percha,3,Perca,Percha,48563.31904173107,38966.0,647,2022
+414,064,Plaus/Plaus,3,Plaus,Plaus,41431.49601328904,32606.0,301,2022
+415,065,Ponte Gardena/Waidbruck,3,Ponte Gardena,Waidbruck,42543.60849462365,28153.0,93,2022
+416,066,Postal/Burgstall,3,Postal,Burgstall,47757.50992045454,36408.46,880,2022
+417,067,Prato allo Stelvio/Prad am Stilfserjoch,3,Prato allo Stelvio,Prad am Stilfserjoch,40343.05472584857,31066.695,1532,2022
+418,068,Predoi/Prettau,3,Predoi,Prettau,36457.06655319149,30166.08,235,2022
+419,069,Proves/Proveis,3,Proves,Proveis,38822.90957894737,31227.0,95,2022
+420,070,Racines/Ratschings,3,Racines,Ratschings,46489.244704607045,38541.0,1845,2022
+421,071,Rasun-Anterselva/Rasen-Antholz,3,Rasun-Anterselva,Rasen-Antholz,48130.34725303292,37910.5,1154,2022
+422,072,Renon/Ritten,3,Renon,Ritten,51792.155304321364,36519.435,3286,2022
+423,073,Rifiano/Riffian,3,Rifiano,Riffian,43341.11400742115,32945.0,539,2022
+424,074,Rio di Pusteria/Mühlbach,3,Rio di Pusteria,Mühlbach,45333.6347863924,36891.0,1264,2022
+425,075,Rodengo/Rodeneck,3,Rodengo,Rodeneck,46033.38995991984,34541.0,499,2022
+426,076,Salorno sulla strada del vino/Salurn an der Weinstraße,3,Salorno sulla strada del vino,Salurn an der Weinstraße,37639.2673938992,28047.0,1508,2022
+427,077,San Candido/Innichen,3,San Candido,Innichen,52341.344732142854,38020.115000000005,1344,2022
+428,079,San Genesio Atesino/Jenesien,3,San Genesio Atesino,Jenesien,51527.21930508475,38763.55,1180,2022
+429,080,San Leonardo in Passiria/St. Leonhard in Passeier,3,San Leonardo in Passiria,St. Leonhard in Passeier,39953.75509500352,31265.0,1421,2022
+430,081,San Lorenzo di Sebato/St. Lorenzen,3,San Lorenzo di Sebato,St. Lorenzen,49749.65965314136,39278.21,1528,2022
+431,082,San Martino in Badia/St. Martin in Thurn,3,San Martino in Badia,St. Martin in Thurn,46974.990265486726,35611.4,678,2022
+432,083,San Martino in Passiria/St. Martin in Passeier,3,San Martino in Passiria,St. Martin in Passeier,38801.49990776326,30319.0,1301,2022
+433,084,San Pancrazio/St. Pankraz,3,San Pancrazio,St. Pankraz,43144.51425249169,34157.0,602,2022
+434,085,Santa Cristina Valgardena/St. Christina in Gröden,3,Santa Cristina Valgardena,St. Christina in Gröden,49213.88073260073,37575.94,819,2022
+435,086,Sarentino/Sarntal,3,Sarentino,Sarntal,42430.75463440111,33414.0,2872,2022
+436,087,Scena/Schenna,3,Scena,Schenna,47558.00927905004,35915.21,1179,2022
+437,088,Selva dei Molini/Mühlwald,3,Selva dei Molini,Mühlwald,44389.5563670412,33753.5,534,2022
+438,089,Selva di Val Gardena/Wolkenstein in Gröden,3,Selva di Val Gardena,Wolkenstein in Gröden,60395.79387512389,40250.08,1009,2022
+439,091,Senales/Schnals,3,Senales,Schnals,42206.70701431493,32656.39,489,2022
+440,092,Sesto/Sexten,3,Sesto,Sexten,50313.366545924975,35870.0,773,2022
+441,093,Silandro/Schlanders,2,Silandro,Schlanders,43315.40783564815,31577.015,2592,2022
+442,094,Sluderno/Schluderns,3,Sluderno,Schluderns,34543.88239625167,27624.0,747,2022
+443,095,Stelvio/Stilfs,3,Stelvio,Stilfs,41670.80430062631,28899.0,479,2022
+444,096,Terento/Terenten,3,Terento,Terenten,46646.57032163743,39485.0,684,2022
+445,097,Terlano/Terlan,3,Terlano,Terlan,51316.73726358149,38277.0,1988,2022
+446,098,Termeno sulla strada del vino/Tramin an der Weinstraße,3,Termeno sulla strada del vino,Tramin an der Weinstraße,44108.86643661972,31320.925,1420,2022
+447,099,Tesimo/Tisens,3,Tesimo,Tisens,41823.356262376234,32522.695,808,2022
+448,100,Tires/Tiers,3,Tires,Tiers,49402.3173594132,36212.72,409,2022
+449,101,Tirolo/Tirol,3,Tirolo,Tirol,49604.269242718445,35837.9,1030,2022
+450,102,Trodena nel parco naturale/Truden im Naturpark,3,Trodena nel parco naturale,Truden im Naturpark,45108.96723004695,32535.89,426,2022
+451,103,Tubre/Taufers im Münstertal,3,Tubre,Taufers im Münstertal,26902.028938547486,21316.885000000002,358,2022
+452,104,Ultimo/Ulten,3,Ultimo,Ulten,40491.86175066313,32798.91,1131,2022
+453,105,Vadena/Pfatten,3,Vadena,Pfatten,41788.848152424944,33171.0,433,2022
+454,106,Valdaora/Olang,3,Valdaora,Olang,50019.23126160991,39002.5,1292,2022
+455,107,Val di Vizze/Pfitsch,3,Val di Vizze,Pfitsch,45961.79591820988,34707.5,1296,2022
+456,108,Valle Aurina/Ahrntal,3,Valle Aurina,Ahrntal,44387.147343749995,34841.0,2368,2022
+457,109,Valle di Casies/Gsies,3,Valle di Casies,Gsies,47327.39078720787,39900.57,813,2022
+458,110,Vandoies/Vintl,3,Vandoies,Vintl,49992.78880090498,37639.0,1326,2022
+459,111,Varna/Vahrn,3,Varna,Vahrn,50134.58145463511,35683.925,2028,2022
+460,112,Verano/Vöran,3,Verano,Vöran,48742.558936781614,36938.19,348,2022
+461,113,Villabassa/Niederdorf,3,Villabassa,Niederdorf,43386.4747112462,33854.5,658,2022
+462,114,Villandro/Villanders,3,Villandro,Villanders,43199.29397039031,36460.0,743,2022
+463,115,Vipiteno/Sterzing,2,Vipiteno,Sterzing,41993.01746229509,31178.265,3050,2022
+464,116,Velturno/Feldthurns,3,Velturno,Feldthurns,49627.62924242424,38685.0,1122,2022
+465,117,La Valle/Wengen,3,La Valle,Wengen,52536.9687473904,41732.0,479,2022
+466,118,Senale-San Felice/Unsere Liebe Frau im Walde-St. Felix,3,Senale-San Felice,Unsere Liebe Frau im Walde-St. Felix,38115.65901315789,29452.21,304,2022
